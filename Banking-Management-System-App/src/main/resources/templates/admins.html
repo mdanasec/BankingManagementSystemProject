@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Management System</title>
+
+</head>
+<body>
+
+<h2>Admin List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Loop through the list of admins and display each row -->
+        <tr th:each="admin : ${admins}">
+            <td th:text="${admin.id}"></td>
+            <td th:text="${admin.firstName}"></td>
+            <td th:text="${admin.lastName}"></td>
+            <td th:text="${admin.phone}"></td>
+            <td th:text="${admin.email}"></td>
+            <td th:text="${admin.password}"></td>
+            <td th:text="${admin.age}"></td>
+            <td th:text="${admin.createdDate}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
